@@ -66,7 +66,7 @@ def scrap_league_season(country, league, year):
         match_url = "https://www.flashscore.com/match/{}/#lineups;1".format(match_id)
         match = scrap_game(match_url)
         if match is None:
-            jogos_quinados_url.append(year + ": " + "https://www.flashscore.com/match/{}/#lineups;1".format(match_url))
+            jogos_quinados_url.append(year + ": " + match_url)
         else:
             matches.append(match)
         match_index += 1
